@@ -1,0 +1,57 @@
+/* Base styles for common elements */
+.generated_list, .col-12, .post_link, .view_all_link {
+    box-sizing: border-box; /* Use border-box model for consistent sizing */
+    padding: 5px; /* Provide padding for elements */
+}
+
+/* Styling for the main list container */
+.generated_list {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    width: 100%; /* Occupy full width */
+}
+
+/* Styling for each category container */
+.col-12 {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: start; /* Align items to the start */
+    gap: 15px 20px; /* Set gaps between items */
+    width: 100%; /* Occupy full width */
+}
+
+/* Styling for the title of each category */
+.col-12 .category-title {
+    width: 100%; /* Occupy full width */
+    display: block; /* Display as block element */
+    clear: both; /* Clear floats if any */
+    margin-bottom: 10px; /* Margin at the bottom for spacing */
+}
+
+/* Common font-weight for post links and "view all" links */
+.post_link, .view_all_link a {
+    font-weight: bold; /* Make text bold */
+}
+
+/* Color for "view all" link */
+.view_all_link a {
+    color: rgb(26, 115, 232); /* Set a specific color */
+}
+
+/* Default styles for Mobile devices (one post per row) */
+.post_link {
+    flex: 0 0 100%; /* Occupy full width */
+}
+
+/* Styles for Medium and Large devices (two posts per row) */
+@media (min-width: 768px) {
+    .post_link {
+        flex: 0 0 calc(50% - 20px); /* Occupy half width minus gap */
+    }
+}
+
+/* Styling for the "view all" link at the end of each category */
+.view_all_link {
+    flex: 100%; /* Occupy full width */
+    clear: both; /* Clear floats if any */
+}
